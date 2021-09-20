@@ -5,6 +5,10 @@ CREATE TABLE departments (
 	department_num VARCHAR,
 	department_name VARCHAR
 );
+
+ALTER TABLE departments
+ADD COLUMN id SERIAL PRIMARY KEY;
+
 SELECT * FROM departments;
 
 --dep,employee table
@@ -15,6 +19,9 @@ CREATE TABLE department_employee (
 	department_num VARCHAR
 );
 
+ALTER TABLE department_employee
+ADD COLUMN id SERIAL PRIMARY KEY;
+
 SELECT * FROM department_employee;
 
 --dep,manager table
@@ -24,6 +31,9 @@ CREATE TABLE department_manager (
 	department_num VARCHAR,
 	manager_num INT
 );
+
+ALTER TABLE department_manager
+ADD COLUMN id SERIAL PRIMARY KEY;
 
 SELECT * FROM department_manager;
 
@@ -40,6 +50,9 @@ CREATE TABLE employees (
 	hire_date DATE
 );
 
+ALTER TABLE employees
+ADD COLUMN id SERIAL PRIMARY KEY;
+
 SELECT * FROM employees;
 
 --salaries table
@@ -50,6 +63,9 @@ CREATE TABLE salaries (
 	salary INT
 );
 
+ALTER TABLE salaries
+ADD COLUMN id SERIAL PRIMARY KEY;
+
 SELECT * FROM salaries;
 
 --dep,manager table
@@ -59,5 +75,8 @@ CREATE TABLE titles (
 	title_id VARCHAR,
 	title VARCHAR
 );
+
+ALTER TABLE titles
+ADD COLUMN id SERIAL PRIMARY KEY;
 
 SELECT * FROM titles;
